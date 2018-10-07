@@ -1,42 +1,42 @@
 `timescale 1ns / 1ps
 
-task Add;
+task Add; //addition
     input [3:0] a,b;
 	 output [3:0] sum;
     begin
-     sum = a + b;
+		sum = a + b;
     end
-  endtask
+endtask
 
 
-task Sub;
+task Sub; //substraction
     input [3:0] a,b;
 	 output [3:0] sum;
     begin
-     sum = a - b;
+		sum = a - b;
     end
 endtask
   
-task Or;
+task Or; //Or
 	input [3:0] a,b;
    output [3:0] c;
   
 	begin
-    c = a | b;
+		c = a | b;
    end
 	
 endtask
 
-task twoscomp;
-    input [3:0] X;
-    output [3:0] Y;
+task twoscomp; //2's compliment
+   input [3:0] X;
+   output [3:0] Y;
 
-begin
- Y[0] = X[0];
- Y[1] = X[1] & ~X[0] | ~X[1] & X[0];
- Y[2] = X[2] & ~ X[1] &  ~ X[0] | ~X[2] & X[0] | ~X[2] & X[1];
- Y[3] = ~X[3] & X[0] | ~X[3] & X[1] | ~X[3] & X[2] | X[3] & ~X[2] & ~X[1] & ~X[0];
-end
+	begin
+		 Y[0] = X[0];
+		 Y[1] = X[1] & ~X[0] | ~X[1] & X[0];
+		 Y[2] = X[2] & ~ X[1] &  ~ X[0] | ~X[2] & X[0] | ~X[2] & X[1];
+		 Y[3] = ~X[3] & X[0] | ~X[3] & X[1] | ~X[3] & X[2] | X[3] & ~X[2] & ~X[1] & ~X[0];
+	end
 
 endtask
 
@@ -46,7 +46,7 @@ task SevenSegmentEncoder;
      output [6:0] seg;
      reg [6:0] seg;
 
-//always block for converting bcd digit into 7 segment format
+	//always block for converting bcd digit into 7 segment format
     begin
         case (bcd) //case statement
             0 : seg = 7'b0000001;

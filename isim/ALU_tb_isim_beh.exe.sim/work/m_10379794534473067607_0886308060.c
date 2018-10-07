@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/media/ritik/Ritik/cse_work/verilog/calculator/Add.v";
+static const char *ng0 = "/media/ritik/Ritik/cse_work/calculator/Add.v";
 static int ng1[] = {0, 0};
 static int ng2[] = {1, 0};
 static int ng3[] = {2, 0};
@@ -43,7 +43,7 @@ static unsigned int ng18[] = {0U, 0U};
 static int ng19[] = {9, 0};
 static unsigned int ng20[] = {4U, 0U};
 static unsigned int ng21[] = {127U, 0U};
-static const char *ng22 = "/media/ritik/Ritik/cse_work/verilog/calculator/ALU.v";
+static const char *ng22 = "/media/ritik/Ritik/cse_work/calculator/ALU.v";
 static unsigned int ng23[] = {2U, 0U};
 static unsigned int ng24[] = {3U, 0U};
 
@@ -2686,12 +2686,12 @@ LAB7:    xsi_set_current_line(12, ng22);
     t7 = (t0 + 3368U);
     t9 = *((char **)t7);
     t7 = (t0 + 6888);
-    t10 = (t0 + 1280);
+    t10 = (t0 + 848);
     t11 = xsi_create_subprogram_invocation(t7, 0, t0, t10, 0, 0);
     xsi_vlog_subprogram_pushinvocation(t10, t11);
-    t12 = (t0 + 4728);
+    t12 = (t0 + 4248);
     xsi_vlogvar_assign_value(t12, t8, 0, 0, 4);
-    t13 = (t0 + 4888);
+    t13 = (t0 + 4408);
     xsi_vlogvar_assign_value(t13, t9, 0, 0, 4);
 
 LAB18:    t14 = (t0 + 6984);
@@ -2707,17 +2707,17 @@ LAB18:    t14 = (t0 + 6984);
 LAB20:    if (t22 != 0)
         goto LAB21;
 
-LAB16:    t15 = (t0 + 1280);
+LAB16:    t15 = (t0 + 848);
     xsi_vlog_subprogram_popinvocation(t15);
 
 LAB17:    t23 = (t0 + 6984);
     t24 = *((char **)t23);
-    t23 = (t0 + 5048);
+    t23 = (t0 + 4568);
     t25 = (t23 + 56U);
     t26 = *((char **)t25);
     t27 = (t0 + 4088);
     xsi_vlogvar_assign_value(t27, t26, 0, 0, 4);
-    t28 = (t0 + 1280);
+    t28 = (t0 + 848);
     t29 = (t0 + 6888);
     t30 = 0;
     xsi_delete_subprogram_invocation(t28, t24, t0, t29, t30);
@@ -2729,12 +2729,12 @@ LAB9:    xsi_set_current_line(13, ng22);
     t3 = (t0 + 3368U);
     t7 = *((char **)t3);
     t3 = (t0 + 6888);
-    t8 = (t0 + 848);
+    t8 = (t0 + 1280);
     t9 = xsi_create_subprogram_invocation(t3, 0, t0, t8, 0, 0);
     xsi_vlog_subprogram_pushinvocation(t8, t9);
-    t10 = (t0 + 4248);
+    t10 = (t0 + 4728);
     xsi_vlogvar_assign_value(t10, t4, 0, 0, 4);
-    t11 = (t0 + 4408);
+    t11 = (t0 + 4888);
     xsi_vlogvar_assign_value(t11, t7, 0, 0, 4);
 
 LAB24:    t12 = (t0 + 6984);
@@ -2750,17 +2750,17 @@ LAB24:    t12 = (t0 + 6984);
 LAB26:    if (t22 != 0)
         goto LAB27;
 
-LAB22:    t13 = (t0 + 848);
+LAB22:    t13 = (t0 + 1280);
     xsi_vlog_subprogram_popinvocation(t13);
 
 LAB23:    t20 = (t0 + 6984);
     t21 = *((char **)t20);
-    t20 = (t0 + 4568);
+    t20 = (t0 + 5048);
     t23 = (t20 + 56U);
     t24 = *((char **)t23);
     t25 = (t0 + 4088);
     xsi_vlogvar_assign_value(t25, t24, 0, 0, 4);
-    t26 = (t0 + 848);
+    t26 = (t0 + 1280);
     t27 = (t0 + 6888);
     t28 = 0;
     xsi_delete_subprogram_invocation(t26, t21, t0, t27, t28);

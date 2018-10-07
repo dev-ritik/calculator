@@ -41,7 +41,7 @@ module ALU_tb;
 	);
 
 	reg [9:0] mem[1:0];
-	integer id,f;
+	integer outputFile;
 	initial begin
 		
 		
@@ -49,9 +49,9 @@ module ALU_tb;
 		/*i1 = 4'b0110;
 		i2 = 4'b0010;
 		ctrl = 2'b00;
-*/
+
 		// Wait 10 ns for global reset to finish
-/*		#10;	
+		#10;	
 		
 		i1 = 4'b0110;
 		i2 = 4'b0010;
@@ -89,18 +89,18 @@ module ALU_tb;
 		
 		#100;
 		
-		f = $fopen("output.txt","w");
+		outputFile = $fopen("output.txt","w");
 
 
-    begin
-      		#100;
+		begin
+			#100;
+			//write to external file
+			$fwrite(outputFile,"%b\n",o);
+		end
 
-      $fwrite(f,"%b\n",   o);
-    end
+		$fclose(outputFile);  
 
-    $fclose(f);  
-
-    //$finish;
+		//$finish;
   end
       
 endmodule

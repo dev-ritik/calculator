@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/media/ritik/Ritik/cse_work/verilog/calculator/ALU_tb_isim_beh.exe" -prj "/media/ritik/Ritik/cse_work/verilog/calculator/ALU_tb_beh.prj" "work.ALU_tb" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/media/ritik/Ritik/cse_work/calculator/ALU_tb_isim_beh.exe" -prj "/media/ritik/Ritik/cse_work/calculator/ALU_tb_beh.prj" "work.ALU_tb" "work.glbl" 

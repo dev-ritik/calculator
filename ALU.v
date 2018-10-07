@@ -6,15 +6,15 @@ module ALU (i1,i2,ctrl,o);
   reg[3:0] r;
   `include "Add.v"
 
-    always @(i1 or i2 or ctrl or o)
+  always @(i1 or i2 or ctrl or o)
     begin
         case (ctrl) //case statement
-        2'b00: Sub(i1,i2,r);
-      2'b01: Add(i1,i2,r);
-      2'b10: Or(i1,i2,r);
-      2'b11: twoscomp(i1,r);
+				2'b00: Add(i1,i2,r);
+				2'b01: Sub(i1,i2,r);
+				2'b10: Or(i1,i2,r);
+				2'b11: twoscomp(i1,r);
         endcase
-		  
+		  // encode output
 		  SevenSegmentEncoder(r,o);
 		  
     end   
