@@ -1,18 +1,18 @@
-module ALU (s,c,ctrl,k);
-  input[3:0] s,c;
+module ALU (i1,i2,ctrl,o);
+  input[3:0] i1,i2;
   input[1:0] ctrl;
-  output[3:0] k;
-  reg[3:0] k;
+  output[3:0] o;
+  reg[3:0] o;
   `include "Add.v"
 
-    always @(s or c or ctrl or k)
+    always @(i1 or i2 or ctrl or o)
     begin
         case (ctrl) //case statement
-        2'b00: Sub(s,c,k);
-		  2'b01: Add(s,c,k);
-		  2'b10: Or(s,c,k);
-		  2'b11: twoscomp(s,k);
+        2'b00: Sub(i1,i2,o);
+      2'b01: Add(i1,i2,o);
+      2'b10: Or(i1,i2,o);
+      2'b11: twoscomp(i1,o);
         endcase
     end   
-	
+  
 endmodule
