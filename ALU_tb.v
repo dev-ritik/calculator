@@ -4,9 +4,9 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   22:52:23 10/07/2018
+// Create Date:   23:17:58 10/07/2018
 // Design Name:   ALU
-// Module Name:   /media/ritik/Ritik/cse_work/calculator/ALU_tb.v
+// Module Name:   /media/ritik/Ritik/cse_work/verilog/calculator/ALU_tb.v
 // Project Name:  calculator
 // Target Device:  
 // Tool versions:  
@@ -30,7 +30,7 @@ module ALU_tb;
 	reg [1:0] ctrl;
 
 	// Outputs
-	wire [3:0] o;
+	wire [6:0] o;
 
 	// Instantiate the Unit Under Test (UUT)
 	ALU uut (
@@ -73,4 +73,3 @@ module ALU_tb;
 	end
       
 endmodule
-
