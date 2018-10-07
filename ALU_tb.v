@@ -40,14 +40,18 @@ module ALU_tb;
 		.o(o)
 	);
 
+	reg [9:0] mem[1:0];
+	integer id,f;
 	initial begin
+		
+		
 		// Initialize Inputs
-		i1 = 4'b0110;
+		/*i1 = 4'b0110;
 		i2 = 4'b0010;
 		ctrl = 2'b00;
-
+*/
 		// Wait 10 ns for global reset to finish
-		#10;
+/*		#10;	
 		
 		i1 = 4'b0110;
 		i2 = 4'b0010;
@@ -69,7 +73,34 @@ module ALU_tb;
 		#10;
         
 		// Add stimulus here
+*/
+		// default values
+		i1 = 4'b1111;
+		i2 = 4'b1111;
+		ctrl = 2'b11;
+		#100;
 
-	end
+		//read values from file
+		$readmemb("input.txt",mem);
+		#10;
+
+		//assign
+		{ctrl,i1,i2}=mem[0];
+		
+		#100;
+		
+		f = $fopen("output.txt","w");
+
+
+    begin
+      		#100;
+
+      $fwrite(f,"%b\n",   o);
+    end
+
+    $fclose(f);  
+
+    //$finish;
+  end
       
 endmodule
