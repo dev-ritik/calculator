@@ -1,5 +1,5 @@
 ISim log file
-Running: /media/ritik/Ritik/cse_work/verilog/calculator/SevenSegmentEncoder_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /media/ritik/Ritik/cse_work/verilog/calculator/SevenSegmentEncoder_isim_beh.wdb 
+Running: /media/ritik/Ritik/cse_work/calculator/ALU_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /media/ritik/Ritik/cse_work/calculator/ALU_isim_beh.wdb 
 ISim P.20131013 (signature 0xfbc00daa)
 This is a Full version of ISim.
 Time resolution is 1 ps
@@ -8,6 +8,23 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# isim force add /SevenSegmentEncoder/bcd 0111 -radix bin
-# isim force add /SevenSegmentEncoder/bcd 0111 -radix bin
+# isim force add /ALU/s 0000 -radix bin -time 1 ps
+# isim force add /ALU/s 0000 -radix bin -time 1 ps
+# isim force add /ALU/s 0000 -radix bin
+# isim force add /ALU/s 0000 -radix bin
+# isim force add /ALU/c 0001 -radix bin
+# isim force add /ALU/c 0001 -radix bin
+# isim force add /ALU/s 0010 -radix bin
+# isim force add /ALU/s 0010 -radix bin
+# isim force add /ALU/ctrl 00 -radix bin
+# isim force add /ALU/ctrl 00 -radix bin
+# run 1.00us
+# isim force add /ALU/ctrl 01 -radix bin
+# isim force add /ALU/ctrl 01 -radix bin
+# run 1.00us
+# isim force add /ALU/ctrl 10 -radix bin
+# isim force add /ALU/ctrl 10 -radix bin
+# run 1.00us
+# isim force add /ALU/ctrl 11 -radix bin
+# isim force add /ALU/ctrl 11 -radix bin
 # run 1.00us
