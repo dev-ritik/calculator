@@ -10,7 +10,7 @@ Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into li
 Starting static elaboration
 Completed static elaboration
 Fuse Memory Usage: 95528 KB
-Fuse CPU Usage: 1220 ms
+Fuse CPU Usage: 1340 ms
 Compiling module ALU
 Compiling module ALU_tb
 Compiling module glbl
@@ -19,5 +19,5 @@ Waiting for 1 sub-compilation(s) to finish...
 Compiled 3 Verilog Units
 Built simulation executable /media/ritik/Ritik/cse_work/calculator/ALU_tb_isim_beh.exe
 Fuse Memory Usage: 655860 KB
-Fuse CPU Usage: 1240 ms
-GCC CPU Usage: 110 ms
+Fuse CPU Usage: 1350 ms
+GCC CPU Usage: 180 ms
