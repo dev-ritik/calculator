@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.io.FileWriter;
+import java.io.FileReader;
 import java.io.PrintWriter;
 import java.io.IOException; 
 // import java.io.BufferedWriter; 
@@ -28,7 +29,10 @@ public class CalcDemoButtons extends Applet implements ActionListener
     TextField textFieldE;
 	// TextField textFieldF;
     char operator;
+	int c;
 	FileWriter writer; 
+	FileReader fr;
+	String s,line;
 	Button button[] = new Button[10];
     ArrayList<Button> operators = new ArrayList<>();
 
@@ -248,10 +252,62 @@ public class CalcDemoButtons extends Applet implements ActionListener
             }
 		    catch (IOException e) {
             e.printStackTrace();
-            }		 
+            }
+            
+			try{	
+            FileReader fr = new FileReader("Data3.txt");
+			s = "";
+			line = "";
+            // Always wrap FileReader in BufferedReader.
+            BufferedReader bufferedReader = new BufferedReader(fr);
+
+            while((s = bufferedReader.readLine()) != null) {
+                line = s;
+            }   
+
+            // Always close files.
+            bufferedReader.close();	
+			}
+			 catch (IOException e) {
+            e.printStackTrace();
+            }
+			switch (line) {
+		   case "0000001":
+		   result = 0;
+           break;
+		   case "1001111":
+		   result = 1;
+           break;
+		   case "0010010":
+		   result = 2;
+           break;
+		   case "0000110":
+		   result = 3;
+           break;
+		   case "1001100":
+		   result = 4;
+           break;
+		   case "0100100":
+		   result = 5;
+           break;
+		   case "0100000":
+		   result = 6;
+           break;
+		   case "0001111":
+		   result = 7;
+           break;
+		   case "0000000":
+		   result = 8;
+           break;
+		   case "0000100":
+		   result = 9;
+           break;         
           }
+
+		  textFieldB.setText("result: " + result);
+		} 
 		 //clear
-		 
+	
         if(str.equals("clear"))
             textField.setText("");
 
