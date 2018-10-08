@@ -125,7 +125,7 @@ public class CalcDemoButtons extends Applet implements ActionListener
 		//tohere
 		//calculations
 		try {
-            writer = new FileWriter("Data2.txt", true);
+            writer = new FileWriter("Input.txt", false);
            }
 		   catch (IOException e) {
             e.printStackTrace();
@@ -141,7 +141,7 @@ public class CalcDemoButtons extends Applet implements ActionListener
             // OutputStream output = new BufferedOutputStream("Data2.txt");
             // BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(output));
 			
-			writer.write("01");
+			writer.write("00");
            }
 		   catch (IOException e) {
             e.printStackTrace();
@@ -151,7 +151,7 @@ public class CalcDemoButtons extends Applet implements ActionListener
             else if (operator == '-'){
                  try {
             
-			writer.write("00");
+			writer.write("01");
            }
 		   catch (IOException e) {
             e.printStackTrace();
@@ -247,7 +247,6 @@ public class CalcDemoButtons extends Applet implements ActionListener
            writer.write("1001");
            break;         
          }
-         writer.write("1111");
 		 writer.close();
             }
 		    catch (IOException e) {
@@ -255,7 +254,7 @@ public class CalcDemoButtons extends Applet implements ActionListener
             }
             
 			try{	
-            FileReader fr = new FileReader("Data3.txt");
+            FileReader fr = new FileReader("Output.txt");
 			s = "";
 			line = "";
             // Always wrap FileReader in BufferedReader.
