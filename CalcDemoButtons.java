@@ -73,7 +73,8 @@ public class CalcDemoButtons extends Applet implements ActionListener
         operators.add(new Button("|"));
         operators.add(new Button("clear"));
         operators.add(new Button("clear All"));
-        operators.add(new Button("="));
+        operators.add(new Button("SetOp"));
+		operators.add(new Button("GetRes"));
  
  //here
  
@@ -82,7 +83,6 @@ public class CalcDemoButtons extends Applet implements ActionListener
             add(x);
             x.addActionListener(this);
         }
-        add(new Button(";)"));
     }
     @Override
     public void actionPerformed(ActionEvent ae)
@@ -132,8 +132,9 @@ public class CalcDemoButtons extends Applet implements ActionListener
            }
 		
 		
-        if(str.equals("="))
+        if(str.equals("SetOp"))
         {
+			
             b = Integer.parseInt(textField.getText());
             if (operator == '+')
 			{
@@ -251,8 +252,10 @@ public class CalcDemoButtons extends Applet implements ActionListener
             }
 		    catch (IOException e) {
             e.printStackTrace();
-            }
-            
+            }           			
+		} 
+		
+		if(str.equals("GetRes")){
 			try{	
             FileReader fr = new FileReader("Output.txt");
 			s = "";
@@ -304,9 +307,10 @@ public class CalcDemoButtons extends Applet implements ActionListener
           }
 
 		  textFieldB.setText("result: " + result);
-		} 
+			
+			
+		}
 		 //clear
-	
         if(str.equals("clear"))
             textField.setText("");
 
