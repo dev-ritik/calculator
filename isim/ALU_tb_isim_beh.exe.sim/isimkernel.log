@@ -2,9 +2,9 @@ Command line:
    ALU_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  38191
+     -socket  60767
 
-Mon Oct  8 03:57:10 2018
+Tue Oct  9 00:36:48 2018
 
 
  Elaboration Time: 0.04 sec

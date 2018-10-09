@@ -1,5 +1,10 @@
 `timescale 1ns / 1ps
 
+// GroupID-12 (17114063_17114059) - Ritik kumar & Prateek mali
+// GroupID-2 (17114049_17114037) - Harshit maurya & Mularam choudhary
+// Date: Oct 8, 2018
+// Add.v - This is the verilog file which executes all the tasks required by ALU.v file.
+
 task Add; //addition
     input [3:0] a,b;
 	 output [3:0] sum;
